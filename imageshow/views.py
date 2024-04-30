@@ -20,8 +20,7 @@ def home(request):
             # Construct the URL path of the uploaded file
             file_url = settings.MEDIA_URL + 'uploads/' + uploaded_file.name
             print(file_url, "uuuuuuuuuuuuuuuuurrrrrrrrrrrrrrrrrrrrrrrrrrlllllllllllllllllll")
-            # Now you have the URL path of the file
-            # You can use it as needed in your application
+            
             return render(request, 'index.html', {'image_file': file_url})
         else:
             messages.error(request,"No files attached..! Attach a glb file and try again..!")
